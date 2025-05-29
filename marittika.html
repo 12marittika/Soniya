@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Marittika - Crafted with Purpose</title>
+<style>
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #faf9f7;
+    color: #333;
+    line-height: 1.6;
+  }
+  a {
+    color: #4a90e2;
+    text-decoration: none;
+  }
+  a:hover, a:focus {
+    text-decoration: underline;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  /* Container */
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  /* Header */
+  header {
+    background: #2e7d32;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 3px 8px rgb(0 0 0 / 0.15);
+  }
+  header h1 {
+    margin: 0 0 10px;
+    font-weight: 900;
+    font-size: 2.8rem;
+    letter-spacing: 0.05em;
+  }
+  header p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-style: italic;
+    opacity: 0.9;
+  }
+  /* Navigation */
+  nav {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+    position: sticky;
+    top: 88px;
+    z-index: 998;
+  }
+  nav a {
+    padding: 15px 20px;
+    display: inline-block;
+    font-weight: 600;
+    color: #2e7d32;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  nav a:hover, nav a:focus, nav a.active {
+    border-bottom: 3px solid #81c784;
+  }
+  /* Section styles */
+  section {
+    padding: 60px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  section:last-child {
+    border: none;
+  }
+  section h2 {
+    text-align: center;
+    font-size: 2.4rem;
+    color: #2e7d32;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+  section h3 {
+    color: #4a90e2;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  section p, section ul {
+    max-width: 760px;
+    margin: 0 auto 25px;
+    font-size: 1.1rem;
+    color: #444;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  ul li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+  }
+  ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #81c784;
+    font-size: 1.5rem;
+    top: 2px;
+  }
+  /* Buttons and links */
+  .btn-link {
+    color: #4a90e2;
+    font-weight: 600;
+    border-bottom: 1px dashed currentColor;
+  }
+  .btn-link:hover, .btn-link:focus {
+    color: #2e7d32;
+    border-bottom: 2px solid currentColor;
+    outline: none;
+  }
+  /* Footer */
+  footer {
+    text-align: center;
+    background: #2e7d32;
+    color: #dcedc8;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+  /* Collaborative Circle founders grid */
+  .founders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto 40px;
+  }
+  .founder-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+    color: #222;
+    transition: transform 0.2s ease;
+  }
+  .founder-card:hover, .founder-card:focus-within {
+    transform: translateY(-6px);
+  }
+  .founder-card h4 {
+    margin-top: 0;
+    color: #2e7d32;
+  }
+  .founder-card a {
+    font-size: 0.9rem;
+  }
+  /* Contact section */
+  .contact-info {
+    max-width: 350px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+  .contact-info p {
+    margin-bottom: 12px;
+  }
+  .contact-info a {
+    color: #81c784;
+    font-weight: 700;
+  }
+  /* Responsive typography */
+  @media (max-width: 640px) {
+    header h1 {
+      font-size: 2.1rem;
+    }
+    nav {
+      font-size: 0.9rem;
+    }
+    section h2 {
+      font-size: 1.9rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>🌿 Marittika</h1>
+    <p>Crafted with Purpose, Powered by People</p>
+  </div>
+</header>
+
+<nav aria-label="Primary navigation">
+  <div class="container">
+    <a href="#who-we-are" class="active">Who We Are</a>
+    <a href="#what-we-do">What We Do</a>
+    <a href="#collaborations">Collaborations</a>
+    <a href="#about-people">About</a>
+    <a href="#collaborative-circle">Collaborative Circle</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main>
+  <section id="who-we-are" aria-labelledby="who-we-are-title">
+    <h2 id="who-we-are-title">Who We Are</h2>
+    <p>Marittika isn’t just a name; it’s a movement.</p>
+    <p>Hi, I’m <strong>Soniya Kumari</strong> – an investment strategist, startup consultant, earthen cookware exporter, women’s empowerment advocate, and your friendly neighborhood impact-maker.</p>
+    <p>At Marittika, we operate at the intersection of craft, commerce, and community. We provide a platform for women artisans creating eco-friendly, handmade earthen cookware—reviving age-old traditions and giving them global homes (yes, we export too!).</p>
+    <p>But Marittika is more than just beautiful pots and pans; it’s about purpose and possibility.</p>
+  </section>
+
+  <section id="what-we-do" aria-labelledby="what-we-do-title">
+    <h2 id="what-we-do-title">What We Do</h2>
+    <ul>
+      <li><strong>Empower Women Artisans</strong>: We collaborate with skilled women across India who create handcrafted, sustainable cookware. We help them reach markets, earn fair incomes, and share their stories with the world.</li>
+      <li><strong>Export Earthen Cookware</strong>: Yes, we ship worldwide! Our eco-conscious, health-friendly cookware is loved in kitchens across the globe. Curious? Let’s get your hands on some earthy magic.</li>
+      <li><strong>Startup & Brand Consultation</strong>: Starting a new venture? Already up and running but feel stuck? I offer brand strategy, business expansion consultation, and investor readiness guidance for startups. With my background in investment strategy at Brahma Tank, I know what investors want—and I help you get there.</li>
+      <li><strong>Social Impact Collaboration</strong>: Through our strong collaboration with the Likhari Foundation, we support women entrepreneurs looking for a start and girl children needing financial support to continue their education. You dream it—we’ll back it.</li>
+    </ul>
+  </section>
+
+  <section id="collaborations" aria-labelledby="collaborations-title">
+    <h2 id="collaborations-title">Our Collaborations</h2>
+    <div class="container" style="max-width: 650px;">
+      <article>
+        <h3>💠 Brahma Tank</h3>
+        <p>A US-based investment firm redefining impact investing.</p>
+        <p>As an Investment Strategist, I work closely with Brahma Tank’s Indian portfolio—curating startups, scouting opportunities, and supporting Indian companies ready for global scale.</p>
+        <p><a href="#" class="btn-link" tabindex="0">Visit Brahma Tank</a></p>
+      </article>
+      <article>
+        <h3>💗 Likhari Foundation</h3>
+        <p>A mission-driven organization uplifting women entrepreneurs and girl children across India.</p>
+        <p>I collaborate with Likhari to bridge finance and dreams—because no woman or girl should have to pause her ambition for lack of resources.</p>
+        <p><a href="#" class="btn-link" tabindex="0">Visit Likhari Foundation</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="about-people" aria-labelledby="about-people-title">
+    <h2 id="about-people-title">About the People Behind the Purpose</h2>
+    <article>
+      <h3>🌸 Soniya Kumari – Founder, Marittika</h3>
+      <p>Investment strategist. Cookware exporter. Startup whisperer.</p>
+      <p>Working to build a better world where artisans thrive, startups scale, and every woman has the power to write her own story.</p>
+      <p><a href="#" class="btn-link" tabindex="0">My LinkedIn Profile</a></p>
+    </article>
+    <article>
+      <h3>🔱 Gurmeet Likhari – Founder, Brahma Tank & Likhari Foundation</h3>
+      <p>Visionary entrepreneur and impact investor with a passion for empowering women and promoting social change. Gurmeet leads with empathy and strategy, championing ventures that blend profit with purpose.</p>
+      <p>Founder of both Brahma Tank, a US-based investment firm focused on conscious capital, and Likhari Foundation, a mission-driven organization uplifting women entrepreneurs and supporting girl children's education across India.</p>
+      <p><a href="https://www.linkedin.com/in/gurmeet-likhari-7aa454?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" class="btn-link" tabindex="0">LinkedIn Profile</a></p>
+    </article>
+  </section>
+
+  <section id="collaborative-circle" aria-labelledby="collaborative-circle-title">
+    <h2 id="collaborative-circle-title">Our Collaborative Circle</h2>
+    <p style="max-width: 760px; margin: 0 auto 30px;">We collaborate with Brahma Tank, which partners with game-changers. The result? A ripple effect of purpose-driven impact. At Marittika, we’re proud to partner with Brahma Tank, a bold US-based investment firm focused on empowering high-impact startups in India. Through this powerful partnership, we stay connected with incredible founders and visionary ventures. These aren’t just startups—they’re stories with soul.</p>
+    <div class="founders-grid">
+      <div class="founder-card" tabindex="0">
+        <h4>🧠 VPRO Infotech</h4>
+        <p><strong>Founder:</strong> Jasmeen Singh</p>
+        <p>Tech with a heartbeat. VPRO Infotech specializes in AI-driven enterprise solutions, app development, and digital platforms that make sense.</p>
+        <p>Website: <a href="http://vproinfotech.com" target="_blank" rel="noopener">vproinfotech.com</a></p>
+      </div>
+      <div class="founder-card" tabindex="0">
+        <h4>🚀 Cureable</h4>
+        <p><strong>Founder:</strong> Krish Singh</p>
+        <p>This heart-led venture provides planned, personalized therapy for special kids and slow learners, right at home.</p>
+        <p>Website: <a href="http://cureable.in" target="_blank" rel="noopener">cureable.in</a></p>
+      </div>
+      <div class="founder-card" tabindex="0">
+        <h4>🛒 Epanipuri Cart</h4>
+        <p><strong>Founder:</strong> Harish Neotia</p>
+        <p>Reinventing India’s favorite street food with hygiene, branding, and scalable business models.</p>
+        <p>LinkedIn: <a href="#" class="btn-link">Epanipuri Cart</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Let’s Talk!</h2>
+    <div class="contact-info">
+      <p>Drop a message, call, or send a pigeon (okay, maybe don’t do that one).</p>
+      <p><strong>Email:</strong> <a href="mailto:Soniya.Prajapati@marittika.com">Soniya.Prajapati@marittika.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+919625686633">96256 86633</a></p>
+      <p><strong>Location:</strong> India – but my heart and work go global 🌏</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2024 Marittika. Crafted with purpose, powered by people.
+</footer>
+
+<script>
+  // Smooth scroll for nav links
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelectorAll('nav a').forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+      const target = document.querySelector(link.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Update active nav link on scroll
+  window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section[id]');
+    let scrollPos = window.scrollY || window.pageYOffset;
+    sections.forEach(section => {
+      if(scrollPos >= section.offsetTop - 100 && scrollPos < section.offsetTop + section.offsetHeight){
+        document.querySelectorAll('nav a').forEach(link => {
+          link.classList.remove('active');
+          if(link.getAttribute('href') === '#' + section.id){
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  });
+</script>
+</body>
+</html>
